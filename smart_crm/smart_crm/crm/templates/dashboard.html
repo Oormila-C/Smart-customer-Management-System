@@ -1,0 +1,34 @@
+<h2>CRM Dashboard</h2>
+
+<p>Total Customers: {{ total_customers }}</p>
+<p>Total Leads: {{ total_leads }}</p>
+<p>Converted Leads: {{ converted }}</p>
+<p>Pending Leads: {{ pending }}</p>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+<a href="/">Back</a>
+<div class="row text-center">
+    <div class="col-md-3">
+        <div class="card bg-primary text-white p-3 shadow-sm mb-3">
+            <h4>Total Customers</h4>
+            <h2>{{ total_customers }}</h2>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card bg-success text-white p-3 shadow-sm mb-3">
+            <h4>Converted Leads</h4>
+            <h2>{{ converted }}</h2>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card bg-warning text-dark p-3 shadow-sm mb-3">
+            <h4>Pending Leads</h4>
+            <h2>{{ pending }}</h2>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card bg-info text-white p-3 shadow-sm mb-3">
+            <h4>Total Leads</h4>
+            <h2>{{ total_leads }}</h2>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+<h2>Add Lead</h2>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+<span class="badge bg-success">Converted</span>
+<span class="badge bg-warning text-dark">In Progress</span>
+<span class="badge bg-secondary">New</span>
+<span class="badge bg-danger">Lost</span>
+
+<form method="POST">
+    {% csrf_token %}
+    Customer:
+    <select name="customer">
+        {% for c in customers %}
+        <option value="{{ c.id }}">{{ c.name }}</option>
+        {% endfor %}
+    </select><br><br>
+
+    Status:
+    <select name="status">
+        <option>New</option>
+        <option>In Progress</option>
+        <option>Converted</option>
+        <option>Lost</option>
+    </select><br><br>
+
+    Follow-up Date:
+    <input type="date" name="follow_up"><br><br>
+
+    Notes:
+    <textarea name="notes"></textarea><br><br>
+
+    <button type="submit">Save Lead</button>
+</form>
+
